@@ -1,0 +1,488 @@
+@charset "ISO-8859-1";
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	padding: 25px;
+	margin: 0;
+	background-color: hsl(28, 89%, 96%);
+	display: flex;
+	flex-direction: row;
+
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 100%;
+	background: #dcdfc0; 
+	border-radius: 15px;
+	color: rgba(0, 0, 0, 0.87);
+	box-shadow: 10px 11px 15px -5px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 10px 11px 15px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 11px 15px -5px rgba(0,0,0,0.75);
+	height: 94vh;
+}
+
+.logo{
+	margin-bottom: 80px;
+	margin-left: 15px;
+	border-radius: 50%;
+    background: linear-gradient(rgb(249, 249, 249), hsla(241, 72%, 46%, 0));
+	height: 220px;
+    width: 220px;
+	padding-top: 20px;
+}
+
+.logo img{
+	width: 220px;
+}
+
+.navicon a{
+	text-transform: uppercase;
+	font-weight: bold;
+	display: block;
+	line-height: 50px;
+	padding: 0 20px;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+.navicon a:hover {
+	background: #ffe082;
+	border-radius: 15px;
+}
+
+.navicon a:is(:link, :active, :visited).active {
+	background: #ffca28;
+	border-radius: 15px;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.navTop{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.navTop img{
+	width: 50%;
+}
+
+
+/* Tela login*/
+
+.login{
+	background-color: #ffca28;
+	border-radius: 15px;
+	margin-top: 90px;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: rgba(0, 0, 0, 0.87);
+	box-shadow: 10px 11px 15px -5px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 10px 11px 15px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 11px 15px -5px rgba(0,0,0,0.75);
+}
+
+.login h1{
+	font-size: 55px;
+	padding-bottom: 10px;
+	padding-top: 30px;
+}
+
+.login input[type=text], select, input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login .title{
+	padding-right: 20px;
+	size: 15px;
+	font-size: 25px;
+}
+
+.login input[type=submit] {
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 7px 20px;
+	margin: 10px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+  
+.login input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+.login input[value=Login]{
+	font-size: 20px;
+}
+
+.login input[value=Reset]{
+	font-size: 20px;
+	width: 113.69px;
+}
+
+.login .inputs{
+	display: block
+}
+
+
+/*Página Casdastro de Brinquedos*/
+.cadastrar{
+	margin-top: 40px;
+	background-color: #ffca28;
+	border-radius: 15px;
+	padding: 10px 50px 20px 50px;
+	color: rgba(0, 0, 0, 0.87);
+	box-shadow: 10px 11px 15px -5px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 10px 11px 15px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 11px 15px -5px rgba(0,0,0,0.75);
+	width: 50%;
+}
+
+.cadastrar .form-group {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 8px 0;
+}
+
+.cadastrar label{
+	font-size: 15px;
+}
+
+.cadastrar input{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #858282;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.cadastrar textarea {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+    border: 1px solid #858282;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: auto; 
+}
+
+.cadastrar select{
+	display: inline-block;
+	border: 1px solid #858282;
+}
+
+.cadastrar .cadastrarBtn{
+	width: 50%;
+	background-color: #45a049;
+	color: whitesmoke;
+}
+
+.cadastrar input[name="detalhe"]{
+	height: 80px;
+}
+
+.divMensagem{
+	background-color: white;
+	padding: 5px;
+	border-radius: 6px;
+	font-weight: bold;
+}
+
+/* Modal pagina de consulta  de produto*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e39f9f;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.modal button{
+	margin-top: 15px;
+	border: none;
+	border-radius: 4px;
+	padding: 3px;
+}
+
+#confirmDelete{
+	background-color: #45a049;
+	color: antiquewhite;
+}
+
+#cancelDelete{
+	background-color: #FF3E3E;
+	color: antiquewhite;
+}
+
+/* Página consulta de produto*/
+.consulta{
+	margin-top: 30px;
+}
+
+.consulta table {
+	margin-top: 10px;
+    border-collapse: collapse;
+    border-spacing: 0;
+	padding: 0;
+}
+
+.consulta th{
+	font-size: 20px;
+	background-color: #e39f9f;
+	width: 190px;
+	text-align: center;
+	padding: 10px;
+}
+
+.consulta .th1{
+	border-top-left-radius: 4px;
+}
+
+.consulta .th2{
+	border-top-right-radius: 4px;
+}
+
+.consulta tr{
+	text-align: center;
+}
+
+.consulta tr:nth-child(odd) {
+    background-color: #dcdfc0;
+}
+
+.consulta td{
+	padding: 10px;
+}
+
+.consulta a{
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 40px;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-table;
+	width: 70px;
+	background: #ffe082;
+	border-radius: 4px;
+}
+
+.pagCadastro a{
+	margin-top: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-table;
+	width: 200px;
+	background: #ffe082;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.consulta a:hover {
+	background: #ffca28;
+	border-radius: 4px;
+}
+
+/*Tela home*/
+.produtos-container{
+	margin-top: 30px;
+	font-weight: 600;
+}
+
+.produtoDestaque {
+	margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px; 
+	text-align: center;
+}
+
+.produtos img{
+	width: 200px;
+	border-radius: 5px;
+}
+
+.produtos {
+	font-size: 20px;
+	font-weight: 500;
+	background-color: #ffe082;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.produtos-container h1{
+	margin-bottom: 10px;
+}
+
+.line {
+    border-top: 1px solid black;
+	margin-top: 5px;
+}
+
+/*Página Categorias*/
+.categorias-container {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+}
+
+.categoriaDestaque{
+	margin-top: 140px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px; 
+	text-align: center;
+}
+
+.categorias img{
+	width: 250px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(31, 30, 30, 0.447);
+    text-align: center;
+	margin-bottom: 10px;
+}
+
+/* Página Equipe*/
+.equipe-container{
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+}
+
+.equipeCompleta{
+	margin-top: 140px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px; 
+	text-align: center;
+}
+
+.equipeCompleta img{
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(31, 30, 30, 0.637);
+	margin-bottom: 10px;
+}
+
+.categoria-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 30px;
+	font-weight: 600;
+}
+
+.filtroCategoria{
+	margin-top: 140px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px; 
+	text-align: center;
+}
+
+.produtoCategoria img{
+	width: 250px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(31, 30, 30, 0.447);
+    text-align: center;
+	margin-bottom: 10px;
+}
+
+
+/*Pagina detalhes produto*/
+.detalhes-container{
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+	width: 700px;
+}
+
+.detalhesTop{
+	display: flex;
+	margin-top: 30px;
+	gap: 80px;
+	padding-right: 60px;
+}
+
+.detalhesTop img{
+	width: 300px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(31, 30, 30, 0.447);
+    text-align: center;
+	margin-bottom: 10px;
+}
+
+.detalhesMeio{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 40px;
+	text-align: left;
+}
+
+.detalhesMeio .descricao{
+	font-size: 40px;
+}
+
+.detalhesMeio .preco{
+	font-size: 20px;
+	
+}
+
+.detalhesBottom {
+	margin-top: 10px;
+    border: 2px dashed #000;
+    border-radius: 15px;
+    padding: 20px;
+}
