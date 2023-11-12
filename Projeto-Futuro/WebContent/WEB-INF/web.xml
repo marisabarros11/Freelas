@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Projeto-Futuro</display-name>
+  <servlet>
+    <description></description>
+    <display-name>Registro</display-name>
+    <servlet-name>Registro</servlet-name>
+    <servlet-class>evento.controller.RegistroController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Registro</servlet-name>
+    <url-pattern>/Registro</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Login</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>evento.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddEvento</display-name>
+    <servlet-name>AddEvento</servlet-name>
+    <servlet-class>evento.controller.AddEvento</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddEvento</servlet-name>
+    <url-pattern>/AddEvento</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>delete</display-name>
+    <servlet-name>delete</servlet-name>
+    <servlet-class>evento.controller.deleteEvento</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>delete</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+</web-app>
